@@ -1,0 +1,283 @@
+/*GLOBAL*/
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --primary: rgb(220, 220, 220);
+    --secondary: rgb(235, 235, 235);
+    --thirdendary: rgb(255, 255, 255);
+    --text: rgb(0, 0, 0);
+    --text2: rgb(60, 60, 60);
+    --accent1: rgb(0, 150, 237);/*#0096ed*/
+    --accent2: rgb(122, 23, 252);/*#ed0096*/
+    --accent3: rgb(178, 13, 255);/*#b20dff*/
+
+    --poppins: "Poppins", sans-serif;
+    --roboto: "Roboto", sans-serif;
+
+    scroll-behavior: smooth;
+}
+.darkMode{
+    --primary: rgb(45, 45, 45);
+    --secondary: rgb(75, 75, 75);
+    --thirdendary: rgb(70, 70, 70);
+    --text: rgb(255, 255, 255);
+    --text2: rgb(200, 200, 200);
+}
+.navbar{
+    width: 100%;
+    position: absolute;
+}
+.navbar ul{
+    list-style-type: none;
+}
+.navbar ul li a{
+    color: var(--text);
+    text-decoration: none;
+    font-family: var(--roboto);
+    font-size: 20px;
+    text-align: center;
+    float: left;
+    padding: 15px;
+}
+.darkModeToggler{
+    float: right;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+.container{
+    max-width: 100%;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    background-color: var(--primary);
+}
+::selection{
+    background-color: var(--accent1);
+}
+@keyframes gradientAnimation{
+    from{
+        background-position: left;
+    }
+    to{
+        background-position: right;
+    }
+}
+
+/*Home Section*/
+.home{
+    height: 100vh;
+    background-color: var(--secondary);
+}
+.semiCircle{
+    width: 65%;
+    height: 55vh;
+    border-bottom-right-radius: 150px;
+    border-top-right-radius: 375px;
+    background-image: linear-gradient(45deg, var(--accent1), var(--accent2), var(--accent3));
+    background-size: 300%;
+    animation: gradientAnimation 25s infinite alternate;
+    margin: 0 1em 1em 0;
+    margin-top: 17vh;
+    float: left;
+    position: absolute;
+}
+.home h1{
+    color: white;
+    font-family: var(--poppins);
+    margin-top: 20vh;
+    margin-left: 20px;
+    position: relative;
+    z-index: 2;
+    font-size: 75px;
+    font-weight: lighter;
+}
+.home p{
+    color: white;
+    font-family: var(--roboto);
+    z-index: 2;
+    position: relative;
+    margin-left: 20px;
+    font-size: 25px;
+}
+.home h6{
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-weight: 200;
+    margin-left: 20px;
+    font-family: var(--roboto);
+}
+.home ul{
+    margin-top: 15%;
+}
+.home ul li{
+    z-index: 2;
+    position: relative;
+    display: inline;
+    margin-left: 20px;
+}
+
+/*Projects Section*/
+.projects{
+    height: fit-content;
+    background-color: var(--primary);
+}
+.project{
+    background-color: var(--thirdendary);
+    width: 70%;
+    margin-left: 15%;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 5vh;
+    -moz-box-shadow: 0 0 10px rgb(45, 45, 45);
+    -webkit-box-shadow: 0 0 10px rgb(45, 45, 45);
+    box-shadow: 0 0 14px rgb(45, 45, 45);
+    margin-top: 5vh;
+}
+.project h2{
+    font-family: var(--poppins);
+    color: var(--text);
+    font-weight: 200;
+    font-size: 30px;
+    text-align: center;
+}
+.project hr{
+    color: var(--secondary);
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid;
+}
+.project .tag{
+    background-color: var(--primary);
+    padding: 1px 5px;
+    border-radius: 10px;
+    color: var(--text2);
+    font-family: var(--poppins);
+    position: absolute;
+}
+.project .tag:hover, .project .tag:focus{
+    color: var(--text);
+    cursor: default;
+}
+.project p{
+    font-family: var(--roboto);
+    color: var(--text);
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+}
+.project ul{
+    text-align: center;
+}
+.project ul li{
+    display: inline;
+}
+.project .technology{
+    background-color: var(--primary);
+    padding: 5px;
+    border-radius: 50%;
+}
+.project .technology:hover, .project .technology:focus{
+    background-color: var(--secondary);
+}
+.project .button{
+    color: var(--text2);
+    text-decoration: none;
+    font-family: var(--poppins);
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: var(--primary);
+}
+.project .button:hover, .project .button:focus{
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+/*About Section*/
+.about{
+    height: fit-content;
+    text-align: center;
+    background-color: var(--secondary);
+}
+.about h2{
+    font-family: var(--poppins);
+    font-size: 75px;
+    color: var(--text);
+    font-weight: 200;
+    text-align: center;
+    margin-top: 15vh;
+    position: relative;
+    z-index: 2;
+}
+.about p{
+    font-family: var(--roboto);
+    font-size: 25px;
+    color: var(--text);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+}
+.about hr{
+    color: var(--primary);
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 15vh;
+    border: 1px solid;
+}
+.about ul li{
+    display: inline;
+    margin: 0 10px;
+}
+.about .skill{
+    background-color: var(--thirdendary);
+    padding: 5px;
+    border-radius: 50%;
+    display: inline-flex;
+    position: relative;
+    z-index: 2;
+    margin-top: 25px;
+}
+.about .skill:hover{
+    background-color: var(--primary);
+}
+.about .filler{
+    margin-bottom: 10vh;
+}
+
+/*Contact Section*/
+.contact{
+    height: fit-content;
+    background-color: rgb(15, 15, 15);
+}
+.contact h2{
+    color:rgb(255, 255, 255);
+    font-weight: 200;
+    font-family: var(--poppins);
+    font-size: 40px;
+    margin-top: 5vh;
+}
+.contact a{
+    color: var(--accent1);
+    font-family: var(--roboto);
+    font-size: 25px;
+}
+.contact .left{
+    float: left;
+    margin-left: 20%;
+}
+.contact .right{
+    float: right;
+    margin-right: 20%;
+}
+.contact .filler{
+    margin-bottom: 10vh;
+}
+/*TODO: MAKE MOBILE RESPONSIVE*/
