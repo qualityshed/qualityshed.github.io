@@ -1,283 +1,198 @@
-/*GLOBAL*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
+::selection{
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+body{
+    width: 100%;
+}
 :root{
-    --primary: rgb(220, 220, 220);
-    --secondary: rgb(235, 235, 235);
-    --thirdendary: rgb(255, 255, 255);
-    --text: rgb(0, 0, 0);
-    --text2: rgb(60, 60, 60);
-    --accent1: rgb(0, 150, 237);/*#0096ed*/
-    --accent2: rgb(122, 23, 252);/*#ed0096*/
-    --accent3: rgb(178, 13, 255);/*#b20dff*/
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    --tertiary-color: #64646433;
+    --primary-text-color: #141414;
+    --secondary-text-color: #444444;
 
-    --poppins: "Poppins", sans-serif;
-    --roboto: "Roboto", sans-serif;
+    --accent-color: #0f6be8;
+    --header-font: "Poppins", sans-serif;
+    --paragraph-font: "Open Sans", sans-serif;
 
     scroll-behavior: smooth;
 }
-.darkMode{
-    --primary: rgb(45, 45, 45);
-    --secondary: rgb(75, 75, 75);
-    --thirdendary: rgb(70, 70, 70);
-    --text: rgb(255, 255, 255);
-    --text2: rgb(200, 200, 200);
-}
-.navbar{
-    width: 100%;
-    position: absolute;
-}
-.navbar ul{
-    list-style-type: none;
-}
-.navbar ul li a{
-    color: var(--text);
-    text-decoration: none;
-    font-family: var(--roboto);
-    font-size: 20px;
+
+/* Home Section */
+#home{
+    height: 70vh;
+    background-color: var(--primary-text-color);
     text-align: center;
-    float: left;
-    padding: 15px;
 }
-.darkModeToggler{
-    float: right;
-    cursor: pointer;
-    padding-top: 15px;
-    padding-right: 15px;
-}
-.container{
-    max-width: 100%;
-    width: 100%;
-    height: fit-content;
-    display: grid;
-    background-color: var(--primary);
-}
-::selection{
-    background-color: var(--accent1);
-}
-@keyframes gradientAnimation{
-    from{
-        background-position: left;
-    }
-    to{
-        background-position: right;
-    }
-}
-
-/*Home Section*/
-.home{
-    height: 100vh;
-    background-color: var(--secondary);
-}
-.semiCircle{
-    width: 65%;
-    height: 55vh;
-    border-bottom-right-radius: 150px;
-    border-top-right-radius: 375px;
-    background-image: linear-gradient(45deg, var(--accent1), var(--accent2), var(--accent3));
-    background-size: 300%;
-    animation: gradientAnimation 25s infinite alternate;
-    margin: 0 1em 1em 0;
-    margin-top: 17vh;
-    float: left;
-    position: absolute;
-}
-.home h1{
-    color: white;
-    font-family: var(--poppins);
-    margin-top: 20vh;
-    margin-left: 20px;
-    position: relative;
-    z-index: 2;
+#home h1{
+    font-family: var(--header-font);
     font-size: 75px;
-    font-weight: lighter;
+    color: #ffffff;
+    padding-top: 20vh;
 }
-.home p{
-    color: white;
-    font-family: var(--roboto);
-    z-index: 2;
-    position: relative;
-    margin-left: 20px;
-    font-size: 25px;
-}
-.home h6{
-    position: relative;
-    z-index: 2;
-    color: white;
-    font-weight: 200;
-    margin-left: 20px;
-    font-family: var(--roboto);
-}
-.home ul{
-    margin-top: 15%;
-}
-.home ul li{
-    z-index: 2;
-    position: relative;
-    display: inline;
-    margin-left: 20px;
-}
-
-/*Projects Section*/
-.projects{
-    height: fit-content;
-    background-color: var(--primary);
-}
-.project{
-    background-color: var(--thirdendary);
-    width: 70%;
-    margin-left: 15%;
-    padding: 10px;
-    border-radius: 15px;
-    margin-bottom: 5vh;
-    -moz-box-shadow: 0 0 10px rgb(45, 45, 45);
-    -webkit-box-shadow: 0 0 10px rgb(45, 45, 45);
-    box-shadow: 0 0 14px rgb(45, 45, 45);
-    margin-top: 5vh;
-}
-.project h2{
-    font-family: var(--poppins);
-    color: var(--text);
-    font-weight: 200;
+#home p{
+    font-family: var(--paragraph-font);
     font-size: 30px;
-    text-align: center;
+    color: #bfbfbf;
+    margin-top: -2vh;
+    margin-bottom: 1vh;
 }
-.project hr{
-    color: var(--secondary);
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border: 1px solid;
-}
-.project .tag{
-    background-color: var(--primary);
-    padding: 1px 5px;
-    border-radius: 10px;
-    color: var(--text2);
-    font-family: var(--poppins);
-    position: absolute;
-}
-.project .tag:hover, .project .tag:focus{
-    color: var(--text);
-    cursor: default;
-}
-.project p{
-    font-family: var(--roboto);
-    color: var(--text);
-    text-align: center;
-    width: 60%;
-    margin-left: 20%;
-}
-.project ul{
-    text-align: center;
-}
-.project ul li{
-    display: inline;
-}
-.project .technology{
-    background-color: var(--primary);
-    padding: 5px;
-    border-radius: 50%;
-}
-.project .technology:hover, .project .technology:focus{
-    background-color: var(--secondary);
-}
-.project .button{
-    color: var(--text2);
+#home .importantButton{
+    color: var(--accent-color);
     text-decoration: none;
-    font-family: var(--poppins);
-    margin-right: 10px;
-    padding: 5px 10px;
-    border-radius: 15px;
-    background-color: var(--primary);
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    border: solid var(--accent-color);
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.2s;
+    width: fit-content;
+    display: inline-block;
+    margin: 5px;
 }
-.project .button:hover, .project .button:focus{
-    background-color: var(--secondary);
-    color: var(--text);
+#home .importantButton:hover, .home .importantButton:focus{
+    background-color: var(--accent-color);
+    color: white;
+    transform: scale(1.15);
+}
+#home .unimportantButton{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.2s;
+    width: fit-content;
+    display: inline-block;
+    margin: 8px;
+}
+#home .unimportantButton:hover, .home .unimportantButton:focus{
+    text-decoration: underline;
+    color: white;
 }
 
-/*About Section*/
-.about{
+/* Projects Section */
+#projects{
+    height: fit-content;
+}
+#projects .project{
+    width: 100%;
+    margin-bottom: 5%;
+}
+#projects .project .projectTextContainer{
+    width: 35%;
+    margin: 5%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#projects .project h2{
+    font-family: var(--header-font);
+    font-size: 40px;
+    color: var(--primary-text-color);
+}
+#projects .project p{
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    color: var(--secondary-text-color);
+}
+#projects .project .importantButton{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    border: solid var(--accent-color);
+    padding: 4px;
+    border-radius: 10px;
+    transition: 0.2s;
+    width: fit-content;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 2vh;
+}
+#projects .project .projectTextContainer .importantButton:hover, .projects .project .projectTextContainer .importantButton:focus{
+    background-color: var(--accent-color);
+    color: white;
+    transform: scale(1.15);
+}
+#projects .project .unimportantButton{
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: var(--paragraph-font);
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 10px;
+    transition: 0.2s;
+    width: fit-content;
+    display: inline-block;
+    margin: 8px;
+}
+#projects .project .projectTextContainer .unimportantButton:hover, .projects .project .projectTextContainer .unimportantButton:focus{
+    text-decoration: underline;
+    color: var(--primary-text-color);
+}
+#projects .project img{
+    width: 45%;
+    display: inline-block;
+    margin: 0 5%;
+    vertical-align: middle;
+}
+#projects .projectCarousel{
+    background-color: var(--primary-text-color);
+    height: 50vh;
+    clip-path: polygon(0 15%, 115% 0, 115% 90%, 0 100%);
+}
+
+/* About Section */
+#about{
     height: fit-content;
     text-align: center;
-    background-color: var(--secondary);
 }
-.about h2{
-    font-family: var(--poppins);
-    font-size: 75px;
-    color: var(--text);
-    font-weight: 200;
-    text-align: center;
-    margin-top: 15vh;
-    position: relative;
-    z-index: 2;
+#about h2{
+    padding-top: 10vh;
+    font-family: var(--header-font);
+    font-size: 50px;
+    color: var(--primary-text-color);
 }
-.about p{
-    font-family: var(--roboto);
-    font-size: 25px;
-    color: var(--text);
-    position: relative;
-    z-index: 2;
-    text-align: center;
+#about p{
+    padding-bottom: 10vh;
     width: 50%;
+    font-family: var(--paragraph-font);
+    font-size: 25px;
+    color: var(--secondary-text-color);
     margin-left: 25%;
 }
-.about hr{
-    color: var(--primary);
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 15vh;
-    border: 1px solid;
-}
-.about ul li{
-    display: inline;
-    margin: 0 10px;
-}
-.about .skill{
-    background-color: var(--thirdendary);
-    padding: 5px;
-    border-radius: 50%;
-    display: inline-flex;
-    position: relative;
-    z-index: 2;
-    margin-top: 25px;
-}
-.about .skill:hover{
-    background-color: var(--primary);
-}
-.about .filler{
-    margin-bottom: 10vh;
+#about svg{
+    display: block;
 }
 
-/*Contact Section*/
-.contact{
-    height: fit-content;
-    background-color: rgb(15, 15, 15);
+/* Contact Section */
+#contact{
+    height: 50vh;
+    background-color: var(--primary-text-color);
+    text-align: center;
 }
-.contact h2{
-    color:rgb(255, 255, 255);
-    font-weight: 200;
-    font-family: var(--poppins);
-    font-size: 40px;
-    margin-top: 5vh;
+#contact ul li{
+    transition: 0.2s;
+    display: inline-block;
+    background-color: #64646433;
+    padding: 5px 5px 0px;
+    border-radius: 25px;
+    margin: 1%;
 }
-.contact a{
-    color: var(--accent1);
-    font-family: var(--roboto);
-    font-size: 25px;
+#contact ul .discordIcon:hover, #contact ul .discordIcon:focus{
+    background-color: #5865f2;
 }
-.contact .left{
-    float: left;
-    margin-left: 20%;
+#contact ul .youtubeIcon:hover, #contact ul .youtubeIcon:focus{
+    background-color: #ff0000;
 }
-.contact .right{
-    float: right;
-    margin-right: 20%;
+#contact ul .emailIcon:hover, #contact ul .emailIcon:focus{
+    background-color: var(--accent-color);
 }
-.contact .filler{
-    margin-bottom: 10vh;
-}
-/*TODO: MAKE MOBILE RESPONSIVE*/

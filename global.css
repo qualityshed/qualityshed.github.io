@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+::selection{
+    background-color: var(--accent-color);
+    color: #ffffff;
+}
+.container{
+    width: 100%;
+}
+:root{
+    --primary-color: #ffffff;
+    --secondary-color: #ffffff;
+    --tertiary-color: #64646433;
+    --primary-text-color: #000000;
+    --secondary-text-color: #444444;
+
+    --accent-color: #0f6be8;
+    --header-font: "Poppins", sans-serif;
+    --paragraph-font: "Open Sans", sans-serif;
+
+    scroll-behavior: smooth;
+}
